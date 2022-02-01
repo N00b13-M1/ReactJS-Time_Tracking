@@ -6,13 +6,21 @@ import Picture from '../img/image-jeremy.png'
 class Body extends Component {
     render() {
         return (
-            <div class="parent">
-                <div class="card1"> 
-                    <div className="bigcard-top">
-                        <img src={Picture} alt="bag" className="avatar"/>
-                        <p>Report for</p>
-                        <h2>Jeremy Robson</h2>
+            <div className="parent container">
+                <div className="card1"> 
+                    <div className="bigcard-bot">
                         <div className="bigcard-top">
+                            <div className="div1">
+                                <img src={Picture} alt="bag" className="avatar"/>
+                            </div>
+                            <div className="div2">
+                                <p className="avatartext">Report for</p>
+                            </div>
+                            <div className="div3">
+                                <h2 className="avatarname">Jeremy Robson</h2>
+                            </div>
+                        </div>
+                        <div className="divbutton">
                             <p>Daily</p>
                             <p>Weekly</p>
                             <p>Montly</p>

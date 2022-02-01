@@ -1,14 +1,59 @@
 
+
+
 .parent {
-    margin: auto auto; 
+    vertical-align: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1.0fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4%
 }
 
 .card1 { grid-area: 1 / 1 / 5 / 2; }
+
+
+.avatar{
+    width: 45%;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-bottom: 20%
+}
+
+.avatartext{
+    color: hsl(236, 100%, 87%);
+}
+
+.avatarname{
+    color: white;
+}
+
+.bigcard-top{
+    background-color: hsl(246, 80%, 60%);
+    padding: 10%;
+    border-radius: 15px;
+    width: 100% !important;
+}
+
+.bigcard-bot{
+    background-color: #1c1f4a;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.bigcard-bot .divbutton{
+    color: hsl(236, 100%, 87%);
+    padding: 24% 10%;
+
+}
+
+.bigcard-bot .divbutton p{
+    font-size: 18px;
+}
+
+.bigcard-bot .divbutton p:hover{
+    color: white !important
+}
+
 .card2 { grid-area: 1 / 2 / 3 / 3; }
 .card3 { grid-area: 1 / 3 / 3 / 4; }
 .card4 { grid-area: 1 / 4 / 3 / 5; }

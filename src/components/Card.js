@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/Card.css'
 import Bag from '../img/icon-work.svg'
 import Points from '../img/icon-ellipsis.svg'
+import Data from "../data.json"
 
 class Card extends Component {
     render() {
