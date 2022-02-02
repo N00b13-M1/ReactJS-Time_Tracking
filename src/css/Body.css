@@ -88,30 +88,27 @@
 @media (max-width: 320px) {
     .card1 { 
         grid-area: 1 / 1 / 4 / 5;
-        gap: 0%
     }
     .card2 { 
         grid-area: 4 / 1 / 7 / 5;
-        gap: 0%
     }
     .card3 { 
         grid-area: 7 / 1 / 10/ 5;
-        gap: 0%
     }
     .card4 {
         grid-area: 10 / 1 / 13/ 5;
-        gap: 0%
+
     }
     .card5 {
         grid-area: 13 / 1 / 16 / 5;
-        gap: 0%
+
     }
     .card6 {
         grid-area: 16 / 1 / 19 / 5;
-        gap: 0%
+
     }
     .card7 {
         grid-area: 19 / 1 / 22 / 5;
-        gap: 0%
+
     }
 }
