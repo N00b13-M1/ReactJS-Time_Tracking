@@ -5,8 +5,8 @@ import data from "../data.json"
 
 class Body extends Component {
     state={currentPage:"Daily"}
-    monAction = (event) => {
-        this.setState({currentPage:event.target.textContent})
+    monAction = (plop) => {
+        this.setState({currentPage:plop.target.textContent})
     }
 
     render() {
@@ -34,10 +34,10 @@ class Body extends Component {
                 </div>
 
             
-                {data.map((e,i)=>{
+                {data.map((element,index)=>{
                     return(
-                        <div key={i} className={`card${i+2}`}>
-                            <Card card={e} currentPage={this.state.currentPage}/>
+                        <div key={index} className={`card${index+2}`}>
+                            <Card card={element} currentPage={this.state.currentPage}/>
                         </div>
                     )
                 })}
