@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import Card from './Card';
 import '../css/Body.css'
-import Picture from '../img/image-jeremy.png'
+import data from "../data.json"
 
 class Body extends Component {
+    state={currentPage:"Daily"}
+    monAction = (event) => {
+        this.setState({currentPage:event.target.textContent})
+    }
+
     render() {
         return (
             <div className="parent container">
@@ -11,7 +16,7 @@ class Body extends Component {
                     <div className="bigcard-bot">
                         <div className="bigcard-top">
                             <div className="div1">
-                                <img src={Picture} alt="bag" className="avatar"/>
+                                <img src='./img/image-jeremy.png' alt="bag" className="avatar"/>
                             </div>
                             <div className="div2">
                                 <p className="avatartext">Report for</p>
@@ -21,33 +26,25 @@ class Body extends Component {
                             </div>
                         </div>
                         <div className="divbutton">
-                            <p>Daily</p>
-                            <p>Weekly</p>
-                            <p>Montly</p>
+                            <p onClick={this.monAction}>Daily</p>
+                            <p onClick={this.monAction}>Weekly</p>
+                            <p onClick={this.monAction}>Monthly</p>
                         </div>
                     </div>
                 </div>
-                <div class="card2">
-                    <Card/>
-                </div>
-                <div class="card3"> 
-                    <Card/>
-                </div>
-                <div class="card4">
-                    <Card/>
-                </div>
-                <div class="card5">
-                    <Card/>
-                </div>
-                <div class="card6">
-                    <Card/>
-                </div>
-                <div class="card7">
-                    <Card/>
-                </div>
+
+            
+                {data.map((e,i)=>{
+                    return(
+                        <div key={i} className={`card${i+2}`}>
+                            <Card card={e} currentPage={this.state.currentPage}/>
+                        </div>
+                    )
+                })}
             </div>
         );
     }
 }
 
 export default Body;
+

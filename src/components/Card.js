@@ -1,33 +1,55 @@
 import React, { Component } from 'react';
 import '../css/Card.css'
-import Bag from '../img/icon-work.svg'
-import Points from '../img/icon-ellipsis.svg'
-import Data from "../data.json"
+
 
 class Card extends Component {
     render() {
         return (
-            <div className="">
+            <div className="frame">
                 <div className="div-bot">
-                    <img src={Bag} alt=""class="bag"/>
-                <div className="div-top">
-                    <div className="row1">
-                        <div className="col-8">
-                            <span>
-                                Work
-                            </span>
+                    <img src={`./img/icon-${this.props.card.title.replace(' ','-')}.svg`} alt="" class="bag" />
+                    <div className="div-top">
+                        <div className="row1">
+                            <div className="col-8">
+                                <span>
+                                    {this.props.card.title}
+                                </span>
+                            </div>
+                            <div className="col-4">
+                                <img src="./img/icon-ellipsis.svg" alt="bag" className="points" />
+                            </div>
                         </div>
-                        <div className="col-4">
-                            <img src={Points} alt="bag" className="points"/>
-                        </div>
+                        {this.props.currentPage === "Daily" &&
+                            <>
+                                <div className="row2">
+                                    <h2>{this.props.card.timeframes.daily.current} hrs</h2>
+                                </div>
+                                <div className="row3">
+                                    <p>Yesterday - {this.props.card.timeframes.daily.previous} hrs</p>
+                                </div>
+                            </>
+                        }
+                        {this.props.currentPage === "Weekly" &&
+                            <>
+                                <div className="row2">
+                                    <h2>{this.props.card.timeframes.weekly.current} hrs</h2>
+                                </div>
+                                <div className="row3">
+                                    <p>Last Week - {this.props.card.timeframes.weekly.previous} hrs</p>
+                                </div>
+                            </>
+                        }
+                        {this.props.currentPage === "Monthly" &&
+                            <>
+                                <div className="row2">
+                                    <h2>{this.props.card.timeframes.monthly.current} hrs</h2>
+                                </div>
+                                <div className="row3">
+                                    <p>Last Month - {this.props.card.timeframes.monthly.previous} hrs</p>
+                                </div>
+                            </>
+                        }
                     </div>
-                    <div className="row2">
-                        <h2>32hrs</h2>
-                    </div>
-                    <div className="row3">
-                        <p>Last Week - 36hrs</p>
-                    </div>
-                </div>
                 </div>
             </div>
         );
@@ -35,3 +57,4 @@ class Card extends Component {
 }
 
 export default Card;
+

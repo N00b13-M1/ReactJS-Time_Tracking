@@ -5,8 +5,8 @@ import './App.css'
 class App extends Component {
   render() {
     return (
-      <div className="App p-5 mx-auto my-auto">
-        <header className="App-header px-auto py-auto">
+      <div className="App m-5">
+        <header className="App-header">
           <Body />
         </header>
       </div>

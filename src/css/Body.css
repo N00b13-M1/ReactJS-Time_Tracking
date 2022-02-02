@@ -1,14 +1,10 @@
 
 
-
 .parent {
-    vertical-align: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4%
 }
-
-.card1 { grid-area: 1 / 1 / 5 / 2; }
 
 
 .avatar{
@@ -54,9 +50,61 @@
     color: white !important
 }
 
-.card2 { grid-area: 1 / 2 / 3 / 3; }
+.card1 { grid-area: 1 / 1 / 5 / 2;}
+.card2 { grid-area: 1 / 2 / 3 / 3;}
+
+.card2 .div-bot{
+    background-color: hsl(15, 100%, 70%)  !important
+}
+
 .card3 { grid-area: 1 / 3 / 3 / 4; }
+
+.card3 .div-bot{
+    background-color: hsl(195, 74%, 62%) !important
+}
+
 .card4 { grid-area: 1 / 4 / 3 / 5; }
+
+.card4 .div-bot{
+    background-color: hsl(348, 100%, 68%)  !important
+}
+
 .card5 { grid-area: 3 / 2 / 5 / 3; }
+
+.card5 .div-bot{
+    background-color: hsl(145, 58%, 55%)!important
+}
 .card6 { grid-area: 3 / 3 / 5 / 4; }
+
+.card6 .div-bot{
+    background-color: hsl(264, 64%, 52%) !important
+}
 .card7 { grid-area: 3 / 4 / 5 / 5; }
+
+.card7 .div-bot{
+    background-color: hsl(43, 84%, 65%) !important
+}
+
+@media (max-width: 320px) {
+    .card1 { 
+        grid-area: 1 / 1 / 5 / 5;
+    }
+    .card2 { 
+        grid-area: 5 / 1 / 10 / 5;
+    }
+    .card3 { 
+        grid-area: 10 / 1 / 15/ 5;
+    }
+    .card4 {
+        grid-area: 15 / 1 / 20 / 5;
+    }
+    .card5 {
+        grid-area: 20 / 1 / 25 / 5;
+    }
+    .card6 {
+        grid-area: 25 / 1 / 30 / 5;
+    }
+    .card7 {
+        grid-area: 30 / 1 / 35 / 5;
+    }
+}
