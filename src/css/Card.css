@@ -58,3 +58,13 @@
     overflow:visible
 }
 
+
+@media (min-width: 320px) and 
+(max-width: 768px){
+    .row2 h2{
+        font-size: 35px
+    }
+    .row3 p{
+        font-size: 25px
+    }
+}
